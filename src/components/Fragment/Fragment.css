@@ -1,0 +1,88 @@
+.fragment {
+  height: fit-content;
+  background-color: #474f46;
+  align-content: center;
+  padding: 70px 20px;
+}
+
+.fragment__container {
+  max-width: 1245px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.fragment__title {
+  font-family: "Micra", sans-serif;
+  font-weight: normal;
+  font-size: 35px;
+  color: #f0f1e9;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.fragment__swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.fragment__image-desktop {
+  max-width: 1000px;
+  width: 100%;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.fragment__image-mobile {
+  width: 90%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.slider__controller {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 100px;
+  color: #f0f1e9;
+  width: 100%;
+}
+
+.slider__controller-mobile {
+  gap: 190px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+}
+
+.swiper-pagination-bullet-active1 {
+  background: #f0f1e9;
+  opacity: 1;
+}
+
+.swiper__button {
+  max-height: 32px;
+  font-size: 31px;
+  cursor: pointer;
+  z-index: 20;
+  transition: 0.2s ease;
+}
+
+.swiper__button:active {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 1150px) {
+  .fragment__title {
+    font-size: 21px;
+  }
+
+  .fragment {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,104 @@
+.reviews {
+  background-color: #f0f1e9;
+  height: fit-content;
+  align-content: center;
+  padding: 70px 20px;
+}
+
+.reviews__container {
+  max-width: 1245px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.swiper-wrapper {
+  padding: 40px 0 40px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #000;
+  font-size: 25px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  transition: 0.2s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 0.5;
+}
+
+.card__data {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__block {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.card__image {
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  border-radius: 40px;
+  object-fit: fill;
+}
+
+.card__name {
+  font-size: 15px;
+  font-family: "Micra", sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+.card__position {
+  font-family: "Involve", sans-serif;
+  font-weight: lighter;
+  margin: 0;
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.card__description {
+  font-family: "Involve", sans-serif;
+  font-weight: lighter;
+  margin: 0;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  .card__data {
+    padding: 40px 20px;
+  }
+
+  .card__block {
+    padding: 20px;
+  }
+
+  .reviews {
+    padding: 20px;
+    height: fit-content;
+  }
+}

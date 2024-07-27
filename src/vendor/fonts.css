@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Micra";
+  font-style: normal;
+  font-weight: 500;
+  src: url(./fonts/Micra.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Micra";
+  font-style: bold;
+  font-weight: 700;
+  src: url(./fonts/Micra-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "IBMPLexSerif";
+  font-style: normal;
+  font-weight: 500;
+  src: url(./fonts/IBMPlexSerif-Medium.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: "PTSerif";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/PTSerif-Regular.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/helvetica-light.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: "Involve";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/Involve-Regular.otf) format("otf");
+}

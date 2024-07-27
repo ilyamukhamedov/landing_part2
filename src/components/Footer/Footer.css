@@ -1,0 +1,149 @@
+.footer {
+  background-color: #474f46;
+  height: fit-content;
+  align-content: center;
+  padding: 60px 20px 5px;
+}
+
+.footer__container {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+
+.footer__title {
+  font-family: "Micra", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  color: #f0f1e9;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  padding-top: 30px;
+}
+
+.footer__name {
+  font-family: "Micra", sans-serif;
+  font-weight: normal;
+  font-size: 21px;
+  color: #f0f1e9;
+  margin: 0;
+}
+
+.footer__text {
+  font-family: "Involve", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #f0f1e9;
+  margin: 0;
+}
+
+.footer__list {
+  font-family: "Involve", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #f0f1e9;
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.footer__info {
+  font-family: "Involve", sans-serif;
+  font-weight: normal;
+  line-height: 20px;
+  font-size: 18px;
+  color: #f0f1e9;
+  margin: 0;
+  transition: 0.2s ease;
+}
+
+.footer__info:hover {
+  transform: scale(1.01);
+  opacity: 0.7;
+}
+
+.footer__block {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__web {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer__img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__img-white {
+  filter: invert(95%) sepia(0%) saturate(1%) hue-rotate(283deg) brightness(98%)
+    contrast(81%);
+}
+
+.footer__copyright {
+  font-family: "Involve", sans-serif;
+  font-weight: normal;
+  font-size: 10px;
+  color: #f0f1e9;
+  margin: 0;
+  padding-top: 40px;
+  text-align: right;
+}
+.footer__link {
+  color: #f0f1e9;
+}
+
+@media screen and (max-width: 600px) {
+  .footer__title {
+    font-size: 17px;
+  }
+
+  .footer__name {
+    font-size: 15px;
+  }
+
+  .footer__text {
+    font-size: 12px;
+  }
+
+  .footer__info {
+    font-size: 12px;
+  }
+
+  .footer__img {
+    width: 15px;
+  }
+
+  .footer {
+    padding: 40px 20px 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 15px;
+    align-items: center;
+  }
+
+  .footer__box {
+    gap: 5px;
+  }
+}
