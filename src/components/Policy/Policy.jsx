@@ -2,7 +2,7 @@ import React from "react";
 import "./Policy.css";
 import book from "../../images/policyBook.webp";
 
-const Policy = () => {
+const Policy = ({ isOpen }) => {
   return (
     <div className="policy" id="policy">
       <div className="policy__container">
@@ -16,8 +16,8 @@ const Policy = () => {
           <br /> Переходите на сайт и будьте первыми, кто узнает о поступлении
           новых книг!
         </p>
-        <button className="policy__button" onClick={""}>
-          новая книга
+        <button className="policy__button" onClick={isOpen}>
+          заказать
         </button>
         <img
           loading="lazy"

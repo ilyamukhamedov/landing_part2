@@ -8,19 +8,20 @@ import Fragment from "../Fragment/Fragment";
 import Footer from "../Footer/Footer";
 import Policy from "../Policy/Policy";
 import ModalPreview from "../ModalPreview/ModalPreview";
+import Modal from "../Modal/Modal";
 
 const App = () => {
-  // const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [openPreview, setOpenPreview] = useState(false);
   const [currentImage, setCurrentImage] = useState("");
 
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   const handleOpenPreview = (imageSrc) => {
     setCurrentImage(imageSrc);
@@ -33,14 +34,14 @@ const App = () => {
 
   return (
     <div className="app">
-      <Header />
+      <Header isOpen={handleOpen} />
       <Author />
       <About />
       <Fragment handleOpen={handleOpenPreview} />
       <Reviews />
-      <Policy />
+      <Policy isOpen={handleOpen} />
       <Footer />
-      {/* <Modal isOpen={open} onClose={handleClose} /> */}
+      <Modal isOpen={open} onClose={handleClose} />
       <ModalPreview
         isOpen={openPreview}
         onClose={handleClosePreview}

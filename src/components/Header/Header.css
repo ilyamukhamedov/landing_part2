@@ -1,5 +1,5 @@
 .header {
-  background: no-repeat url(../../images/background.jpg) center;
+  background: no-repeat url(../../images/background.webp) center;
   background-size: cover;
   height: 100vh;
   padding: 0 20px;
@@ -50,9 +50,8 @@
   margin: 0;
   color: #fff;
   font-family: "Micra", sans-serif;
-  font-size: 23px;
+  font-size: 35px;
   text-align: center;
-  line-height: 27px;
   font-weight: normal;
   letter-spacing: 1px;
   filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.25));

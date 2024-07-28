@@ -14,11 +14,11 @@ export default async function sendTelegram(e) {
   formSendResultDescription.textContent = "";
   formSendResultTitle.style.color = "#000";
 
-  const { name, phone, email } = Object.fromEntries(
+  const { name, phone, email, message } = Object.fromEntries(
     new FormData(form).entries()
   );
 
-  const text = `Заявка от ${name}\nEmail: ${email}\nТелефон: ${phone} `;
+  const text = `Заявка от ${name}\nEmail: ${email}\nТелефон: ${phone}\nКомментарий: ${message}`;
 
   try {
     formBtn.textContent = "Отправка...";
