@@ -7,6 +7,7 @@ const Modal = ({ isOpen, onClose }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [nameDirty, setNameDirty] = useState(false);
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [emailDirty, setEmailDirty] = useState(false);
@@ -72,6 +73,10 @@ const Modal = ({ isOpen, onClose }) => {
     }
   };
 
+  const messageHandler = (e) => {
+    setMessage(e.target.value);
+  };
+
   const openConfirmModal = (e) => {
     sendTelegram(e);
 
@@ -81,6 +86,7 @@ const Modal = ({ isOpen, onClose }) => {
       setName("");
       setPhone("");
       setEmail("");
+      setMessage("");
       setOpenConfirm(true);
     }, 1000);
 
@@ -232,6 +238,16 @@ const Modal = ({ isOpen, onClose }) => {
             >
               {emailError}
             </span>
+            <input
+              name="message"
+              type="message"
+              className="modal__input modal__input-message"
+              placeholder="Комментарий"
+              maxLength="400"
+              required
+              value={message}
+              onChange={messageHandler}
+            />
             <button
               type="submit"
               className={`modal__button ${

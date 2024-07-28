@@ -118,6 +118,10 @@
   margin-top: 0;
 }
 
+.modal__input:last-of-type {
+  padding-bottom: 40px;
+}
+
 .modal__button {
   height: 50px;
   border-radius: 8px;
