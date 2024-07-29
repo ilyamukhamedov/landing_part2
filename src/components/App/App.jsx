@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "../Header/Header";
 import Author from "../Author/Author";
@@ -22,6 +22,20 @@ const App = () => {
   const handleOpen = () => {
     setOpen(true);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && handleOpen) {
+        handleClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleOpen, handleClose]);
 
   const handleOpenPreview = (imageSrc) => {
     setCurrentImage(imageSrc);

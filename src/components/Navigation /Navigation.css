@@ -44,6 +44,8 @@
   font-weight: normal;
   font-size: 13px;
   color: #d8d8d8;
+  background-color: transparent;
+  border: none;
   text-decoration: none;
   letter-spacing: 1px;
   transition: 0.3s ease;
@@ -51,7 +53,7 @@
 
 .nav__link:hover {
   color: #fff;
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .social {

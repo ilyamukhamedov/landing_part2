@@ -28,7 +28,7 @@
   width: 100%;
   max-width: 358px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #f0f1e9;
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
   transform: scale(0.9);
   transition: transform 0.3s ease;
@@ -106,7 +106,7 @@
 }
 
 .modal__input:focus {
-  background-color: #fff;
+  background-color: #f0f1e9;
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -118,7 +118,8 @@
   margin-top: 0;
 }
 
-.modal__input:last-of-type {
+.modal__input-message {
+  padding-top: 10px;
   padding-bottom: 40px;
 }
 

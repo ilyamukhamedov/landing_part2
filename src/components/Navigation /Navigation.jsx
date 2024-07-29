@@ -7,7 +7,14 @@ import dzen from "../../images/dzen.svg";
 const Navigation = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const handleOpenMenu = () => {
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const handleOpenMenu = (id) => {
+    scrollToSection(id);
     setOpenMenu(!openMenu);
   };
 
@@ -21,38 +28,45 @@ const Navigation = () => {
         >
           <ul className="nav__links">
             <li>
-              <a href="#author" className="nav__link" onClick={handleOpenMenu}>
-                ОБ АВТОРАХ
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="nav__link" onClick={handleOpenMenu}>
-                О КНИГЕ
-              </a>
-            </li>
-            <li>
-              <a
-                href="#fragments"
+              <button
                 className="nav__link"
-                onClick={handleOpenMenu}
+                onClick={() => handleOpenMenu("author")}
+              >
+                ОБ АВТОРАХ
+              </button>
+            </li>
+            <li>
+              <button
+                className="nav__link"
+                onClick={() => handleOpenMenu("about")}
+              >
+                О КНИГЕ
+              </button>
+            </li>
+            <li>
+              <button
+                className="nav__link"
+                onClick={() => handleOpenMenu("fragments")}
               >
                 ФРАГМЕНТЫ И ОТЗЫВЫ
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#policy" className="nav__link" onClick={handleOpenMenu}>
+              <button
+                className="nav__link"
+                onClick={() => handleOpenMenu("policy")}
+              >
                 ПОЛИТИКА ПРОДАЖ
-              </a>
+              </button>
             </li>
 
             <li>
-              <a
-                href="#contacts"
+              <button
                 className="nav__link"
-                onClick={handleOpenMenu}
+                onClick={() => handleOpenMenu("contacts")}
               >
                 КОНТАКТЫ
-              </a>
+              </button>
             </li>
           </ul>
           <div className="social">
