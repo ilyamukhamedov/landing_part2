@@ -9,8 +9,9 @@ import "swiper/css/pagination";
 
 const Reviews = () => {
   return (
-    <div className="reviews">
+    <div className="reviews" id="reviews">
       <section className="reviews__container">
+        <h1 className="reviews__title">РЕЦЕНЗИИ И ОТЗЫВЫ</h1>
         <Swiper
           modules={[Navigation, Pagination]}
           loop={true}

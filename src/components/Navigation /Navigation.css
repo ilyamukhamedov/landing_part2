@@ -49,6 +49,7 @@
   text-decoration: none;
   letter-spacing: 1px;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .nav__link:hover {

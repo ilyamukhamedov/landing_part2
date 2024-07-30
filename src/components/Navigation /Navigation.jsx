@@ -46,9 +46,9 @@ const Navigation = () => {
             <li>
               <button
                 className="nav__link"
-                onClick={() => handleOpenMenu("fragments")}
+                onClick={() => handleOpenMenu("reviews")}
               >
-                ФРАГМЕНТЫ И ОТЗЫВЫ
+                РЕЦЕНЗИИ И ОТЗЫВЫ
               </button>
             </li>
             <li>
@@ -99,7 +99,7 @@ const Navigation = () => {
 
         <div
           className={`nav__btn ${openMenu ? "nav__btn-active" : ""}`}
-          onClick={handleOpenMenu}
+          onClick={() => setOpenMenu(!openMenu)}
         >
           {openMenu ? (
             <ion-icon name="close-outline"></ion-icon>

@@ -19,7 +19,7 @@ const Fragments = ({ handleOpen }) => {
   const stretch = isMobile ? 90 : 400;
 
   return (
-    <div className="fragment" id="fragments">
+    <div className="fragment">
       <div className="fragment__container">
         <h1 className="fragment__title">ФРАГМЕНТЫ</h1>
         <Swiper
