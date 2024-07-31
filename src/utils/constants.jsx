@@ -1,5 +1,5 @@
-// import mobile1 from "../images/1.webp";
-// import mobile2 from "../images/2.webp";
+import mobile1 from "../images/1.webp";
+import mobile2 from "../images/2.webp";
 import mobile88 from "../images/88.webp";
 import mobile89 from "../images/89.webp";
 import mobile256 from "../images/256.webp";
@@ -7,25 +7,18 @@ import mobile257 from "../images/257.webp";
 import page1 from "../images/page_1.webp";
 import page2 from "../images/page_2.webp";
 import page3 from "../images/page_3.webp";
-import page4 from "../images/page_4.webp";
-import page5 from "../images/page_5.webp";
-import page6 from "../images/page_6.webp";
-import review1 from "../images/review_1.webp";
-import review2 from "../images/review_2.webp";
-import review3 from "../images/review_3.webp";
-import review4 from "../images/review_4.webp";
 
 export const fragmentMobile = [
-  // {
-  //   id: 1,
-  //   image: mobile1,
-  //   alt: "fragment of book",
-  // },
-  // {
-  //   id: 2,
-  //   image: mobile2,
-  //   alt: "fragment of book",
-  // },
+  {
+    id: 1,
+    image: mobile1,
+    alt: "fragment of book",
+  },
+  {
+    id: 2,
+    image: mobile2,
+    alt: "fragment of book",
+  },
   {
     id: 3,
     image: mobile88,
@@ -46,36 +39,6 @@ export const fragmentMobile = [
     image: mobile257,
     alt: "fragment of book",
   },
-  // {
-  //   id: 7,
-  //   image: mobile36,
-  //   alt: "fragment of book",
-  // },
-  // {
-  //   id: 8,
-  //   image: mobile37,
-  //   alt: "fragment of book",
-  // },
-  // {
-  //   id: 9,
-  //   image: mobile90,
-  //   alt: "fragment of book",
-  // },
-  // {
-  //   id: 10,
-  //   image: mobile91,
-  //   alt: "fragment of book",
-  // },
-  // {
-  //   id: 11,
-  //   image: mobile232,
-  //   alt: "fragment of book",
-  // },
-  // {
-  //   id: 12,
-  //   image: mobile233,
-  //   alt: "fragment of book",
-  // },
 ];
 
 export const fragmentDesktop = [
@@ -92,21 +55,6 @@ export const fragmentDesktop = [
   {
     id: 3,
     image: page3,
-    alt: "fragment of book",
-  },
-  {
-    id: 4,
-    image: page4,
-    alt: "fragment of book",
-  },
-  {
-    id: 5,
-    image: page5,
-    alt: "fragment of book",
-  },
-  {
-    id: 6,
-    image: page6,
     alt: "fragment of book",
   },
 ];
@@ -130,34 +78,8 @@ export const reviewsData = [
   },
   {
     id: 3,
-    name: "Андрей Лысиков",
-    position:
-      "Кандидат биологических наук, старший научный сотрудник Института лесоведения РАН, член Союза фотохудожников России, садовый журналист, фотограф и консультант",
-    description:
-      "Авторы раскрывают многие секреты своей творческой ландшафтной лаборатории. И при всем этом в рождении садов компании NB-GARDEN остается нечто непостижимое: как из прозаичных куч грунта, штабелей плитки, клинкера и горшков с посадочным материалом по замысловатому сценарию рождаются красота и совершенство, от которых замирает сердце! В этом я вижу зримое подтверждение принципов гештальт-философии о том, что целое гораздо значимее, чем совокупность слагающих его частей.",
-  },
-
-  {
-    id: 4,
-    photo: review1,
-    alt: "photo of review",
-  },
-
-  {
-    id: 5,
-    photo: review2,
-    alt: "photo of review",
-  },
-
-  {
-    id: 6,
-    photo: review3,
-    alt: "photo of review",
-  },
-
-  {
-    id: 7,
-    photo: review4,
-    alt: "photo of review",
+    name: "Отзыв Ждунов",
+    position: "Первопроходец в ожидании отзывов",
+    description: "Авторы интригующе ждут вашего отзыва",
   },
 ];

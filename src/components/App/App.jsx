@@ -9,6 +9,7 @@ import Footer from "../Footer/Footer";
 import Policy from "../Policy/Policy";
 import ModalPreview from "../ModalPreview/ModalPreview";
 import Modal from "../Modal/Modal";
+import News from "../News/News";
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -54,6 +55,7 @@ const App = () => {
       <Fragment handleOpen={handleOpenPreview} />
       <Reviews />
       <Policy isOpen={handleOpen} />
+      <News />
       <Footer />
       <Modal isOpen={open} onClose={handleClose} />
       <ModalPreview
