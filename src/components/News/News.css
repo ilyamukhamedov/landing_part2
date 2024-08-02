@@ -18,20 +18,12 @@
   margin: 0;
 }
 
-/* .news__block {
-  background-color: #fff;
-  border: 1px solid #222;
-  border-radius: 45px;
-  max-width: 565px;
-  height: 414px;
-  max-height: 414px;
-} */
-
 .news__image {
   max-width: 565px;
   width: 100%;
   object-fit: contain;
   border-radius: 45px;
+  border: 1px solid #222;
 }
 
 @media screen and (max-width: 1150px) {

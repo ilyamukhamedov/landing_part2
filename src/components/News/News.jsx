@@ -17,7 +17,7 @@ const News = () => {
           modules={[Navigation, Pagination]}
           loop={true}
           grabCursor={true}
-          spaceBetween={115}
+          spaceBetween={110}
           pagination={{
             clickable: true,
           }}
@@ -25,9 +25,6 @@ const News = () => {
             768: {
               slidesPerView: 2,
             },
-            // 1125: {
-            //   slidesPerView: 2,
-            // },
           }}
           navigation={true}
         >
