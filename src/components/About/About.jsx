@@ -13,13 +13,7 @@ const About = () => {
           target="_blank"
           href="https://www.nbgarden.ru/book_1/"
         >
-          <p
-            className="about__paragraph"
-            // target="_blank"
-            // href="https://www.nbgarden.ru/book_1/"
-          >
-            Узнать что было в 1 части
-          </p>
+          <p className="about__paragraph">Узнать что было в 1 части</p>
           <img className="about__image-link" src={link} alt="image of link" />
         </a>
         <h1 className="about__title">О Книге</h1>
@@ -40,7 +34,7 @@ const About = () => {
               базовый ассортимент древесно-кустарниковых и травянистых растений,
               используемых автором в проектах лесных участков.
             </p>
-            {/* <img className="about__image" src={image1} alt="image of garden" /> */}
+
           </div>
 
           <div className="about__block">

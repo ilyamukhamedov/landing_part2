@@ -99,7 +99,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .about__box {
+  .about__link {
     transform: scale(0.7);
     top: 10px;
   }

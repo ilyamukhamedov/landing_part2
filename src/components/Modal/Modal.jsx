@@ -18,6 +18,12 @@ const Modal = ({ isOpen, onClose }) => {
   const [emailError, setEmailError] = useState(
     "Пожалуйста введите телефон или Email"
   );
+
+  // const [messageError, setMessageError] = useState(
+  //   "Пожалуйста введите телефон или Email"
+  // );
+
+  // const [messageDirty, setMessageDirty] = useState(false);
   const [formValid, setFormValid] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
 
@@ -50,6 +56,7 @@ const Modal = ({ isOpen, onClose }) => {
 
     const re =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
     if (!re.test(String(value).toLowerCase())) {
       setEmailError("Некорректный email");
     } else {

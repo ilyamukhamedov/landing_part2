@@ -38,6 +38,7 @@
   text-align: center;
   margin: 0;
   line-height: 35px;
+  z-index: 2;
 }
 
 .policy__text {
