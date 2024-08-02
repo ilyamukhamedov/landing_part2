@@ -20,7 +20,7 @@ const Policy = ({ isOpen }) => {
           партнерам <br />
           по адресу:
           <br />
-          ПОЯВЯТСЯ ПОЗЖЕ!
+          Информация обновляется.
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
         <img

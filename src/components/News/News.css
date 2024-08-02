@@ -20,7 +20,7 @@
 
 .news__image {
   max-width: 565px;
-  width: 100%;
+  width: calc(100% - 2px);
   object-fit: contain;
   border-radius: 45px;
   border: 1px solid #222;
