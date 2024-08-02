@@ -8,7 +8,7 @@
 
 .policy__container {
   position: relative;
-  max-width: 1245px;
+  max-width: 1165px;
   margin: 0 auto;
   background-color: #5c635a;
   border-radius: 45px;
@@ -17,6 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }
 
 .policy__title {
@@ -33,10 +34,9 @@
   font-weight: normal;
   font-size: 21px;
   color: #f0f1e9;
-  padding-top: 20px;
   max-width: 900px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
   line-height: 35px;
 }
 
@@ -45,17 +45,15 @@
   font-weight: normal;
   font-size: 21px;
   color: #f0f1e9;
-  padding-top: 20px;
   max-width: 900px;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
   line-height: 35px;
 }
 
 .policy__button {
   background-color: rgba(216, 216, 216, 0.25);
   padding: 22px 24px;
-  margin-top: 20px;
   border: 3px solid rgb(216, 216, 216, 0.25);
   border-radius: 17px;
   color: #fff;
@@ -64,46 +62,22 @@
   cursor: pointer;
   box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
   transition: 0.2s ease;
+  z-index: 2;
 }
 
 .policy__button:hover {
   background-color: rgba(216, 216, 216, 0.5);
 }
 
-.policy__text {
-  font-family: "Involve", sans-serif;
-  font-weight: normal;
-  font-size: 21px;
-  color: #f0f1e9;
-  margin: 0;
-  padding-top: 30px;
-}
-
-.policy__list {
-  font-family: "Involve", sans-serif;
-  font-weight: normal;
-  font-size: 21px;
-  color: #f0f1e9;
-  margin: 0;
-  padding-top: 20px;
-}
-
 .policy__image {
-  max-width: 600px;
-  /* max-height: 350px; */
+  max-width: 500px;
   width: 100%;
   opacity: 30%;
   filter: drop-shadow(-10px 12px 5px rgba(0, 0, 0, 0.5));
   position: absolute;
   right: 30px;
 }
-.policy__image1 {
-  max-width: 600px;
-  /* max-height: 350px; */
-  width: 100%;
-  opacity: 30%;
-  filter: drop-shadow(-10px 12px 5px rgba(0, 0, 0, 0.5));
-  position: absolute;
+.policy__image-left {
   left: 35px;
 }
 
@@ -123,7 +97,10 @@
 
   .policy__description {
     font-size: 18px;
-    padding-top: 30px;
+  }
+
+  .policy__text {
+    font-size: 18px;
   }
 
   .policy__button {
@@ -139,16 +116,30 @@
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 975px) {
+  .policy__container {
+    padding: 20px;
+  }
   .policy__image {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+
+  .policy__image-left {
     display: none;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .policy__button {
-    margin-top: 30px;
-    padding: 30px 24px;
-    width: 100%;
+  .policy__image {
+    max-width: 290px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .policy__title {
+    text-align: center;
   }
 }

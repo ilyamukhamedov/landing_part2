@@ -2,25 +2,41 @@ import React from "react";
 import "./About.css";
 import image1 from "../../images/about1.webp";
 import image2 from "../../images/about2.webp";
+import link from "../../images/link-outline.svg";
 
 const About = () => {
   return (
     <div className="about" id="about">
       <div className="about__container">
+        <div className="about__box">
+          <a
+            className="about__link"
+            target="_blank"
+            href="https://www.nbgarden.ru/book_1/"
+          >
+            Узнать что было в 1 части
+          </a>
+          <img className="about__image-link" src={link} alt="image of link" />
+        </div>
         <h1 className="about__title">О Книге</h1>
         <div className="about__wrapper">
           <div className="about__block">
             <p className="about__text">
               Эта книга о лесе и лесных участках, о кусочке природного и
               рукотворного ландшафта с лесными деревьями внутри ограды вашего
-              загородного дома. Автор, Наталья Борисова, любит Лес и свою работу
-              ландшафтного архитектора и с удовольствием делится опытом и
-              знаниями по проектированию участков с лесным контекстом. В книге
-              обсуждается базовый ассортимент древесно-кустарниковых и
-              травянистых растений, используемых автором в проектах лесных
-              участков.
+              загородного дома.
+              <img
+                className="about__image"
+                src={image1}
+                alt="image of garden"
+              />
+              Автор, Наталья Борисова, любит Лес и свою работу ландшафтного
+              архитектора и с удовольствием делится опытом и знаниями по
+              проектированию участков с лесным контекстом. В книге обсуждается
+              базовый ассортимент древесно-кустарниковых и травянистых растений,
+              используемых автором в проектах лесных участков.
             </p>
-            <img className="about__image" src={image1} alt="image of garden" />
+            {/* <img className="about__image" src={image1} alt="image of garden" /> */}
           </div>
 
           <div className="about__block">

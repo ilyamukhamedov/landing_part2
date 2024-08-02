@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Modal.css";
 import ConfirmModal from "../ConfirmModal/ConfirmModal";
-import sendTelegram from "../../utils/telegram";
+import sendTelegram from "../../utils/sendTelegram";
 
 const Modal = ({ isOpen, onClose }) => {
   const [name, setName] = useState("");
@@ -11,17 +11,11 @@ const Modal = ({ isOpen, onClose }) => {
   const [nameDirty, setNameDirty] = useState(false);
   const [phoneDirty, setPhoneDirty] = useState(false);
   const [emailDirty, setEmailDirty] = useState(false);
-  // const [messageDirty, setMessageDirty] = useState(false);
   const [nameError, setNameError] = useState("Имя не может быть пустым");
-  // const [phoneError, setPhoneError] = useState("Неверный номер телефона");
-  // const [emailError, setEmailError] = useState("Неккоректный Email");
   const [phoneError, setPhoneError] = useState(
     "Пожалуйста введите телефон или Email"
   );
   const [emailError, setEmailError] = useState(
-    "Пожалуйста введите телефон или Email"
-  );
-  const [messageError, setMessageError] = useState(
     "Пожалуйста введите телефон или Email"
   );
   const [formValid, setFormValid] = useState(false);
@@ -34,34 +28,6 @@ const Modal = ({ isOpen, onClose }) => {
       setFormValid(true);
     }
   }, [nameError, phoneError, emailError]);
-
-  // useEffect(() => {
-  //   if (phone.length != 1) {
-  //     setEmailError("");
-  //   }
-  //   if (email.length != 0) {
-  //     setPhoneError("");
-  //   }
-  // }, [phone, email]);
-
-  // useEffect(() => {
-  //   if (phone.length < 2) {
-  //     setPhoneError("Пожалуйста введите телефон или Email");
-  //   }
-  //   if (email.length == 0) {
-  //     setEmailError("Пожалуйста введите телефон или Email");
-  //   }
-  // }, [phone, email]);
-
-  // useEffect(() => {
-  //   if (phoneError == "" && formValid) {
-  //     setEmailError("");
-  //   }
-
-  //   if (emailError == "" && formValid) {
-  //     setPhoneError("");
-  //   }
-  // }, [emailError, phoneError, formValid]);
 
   const blurHandler = (e) => {
     switch (e.target.name) {
@@ -107,20 +73,6 @@ const Modal = ({ isOpen, onClose }) => {
       setEmailError("");
     }
 
-    // console.log(phone.length);
-    // console.log(`1 = ${phone[0]}`);
-    // console.log(`2 = ${phone[1]}`);
-    // console.log(`3 = ${phone[2]}`);
-    // console.log(`4 = ${phone[3]}`);
-    // console.log(`5 = ${phone[4]}`);
-
-    // console.log(value.length);
-    // console.log(`1 = ${value[0]}`);
-    // console.log(`2 = ${value[1]}`);
-    // console.log(`3 = ${value[2]}`);
-    // console.log(`4 = ${value[3]}`);
-    // console.log(`5 = ${value[4]}`);
-
     if (!value) {
       setPhoneError("Пожалуйста введите телефон или Email");
     }
@@ -142,6 +94,8 @@ const Modal = ({ isOpen, onClose }) => {
   };
 
   const openConfirmModal = (e) => {
+    e.preventDefault();
+
     sendTelegram(e);
 
     setTimeout(() => {
@@ -156,7 +110,7 @@ const Modal = ({ isOpen, onClose }) => {
 
     setTimeout(() => {
       setOpenConfirm(false);
-    }, 3000);
+    }, 4000);
   };
 
   const getInputNumbersValue = (input) => {
@@ -183,13 +137,10 @@ const Modal = ({ isOpen, onClose }) => {
       return;
     }
 
-    if (["7", "8", "9"].includes(inputNumbersValue[0])) {
-      if (inputNumbersValue[0] == "9")
-        inputNumbersValue = "7" + inputNumbersValue;
-      let firstSymbols = inputNumbersValue[0] == "8" ? "8" : "+7";
-      formattedInputValue = firstSymbols + " ";
+    if (inputNumbersValue.length >= 1) {
+      formattedInputValue = "+7";
       if (inputNumbersValue.length > 1) {
-        formattedInputValue += "(" + inputNumbersValue.substring(1, 4);
+        formattedInputValue += " (" + inputNumbersValue.substring(1, 4);
       }
       if (inputNumbersValue.length >= 5) {
         formattedInputValue += ") " + inputNumbersValue.substring(4, 7);
@@ -200,19 +151,41 @@ const Modal = ({ isOpen, onClose }) => {
       if (inputNumbersValue.length >= 10) {
         formattedInputValue += "-" + inputNumbersValue.substring(9, 11);
       }
-    } else {
-      formattedInputValue = "+" + inputNumbersValue;
     }
 
     input.value = formattedInputValue;
   };
 
-  const onPhoneKeyDown = (e) => {
-    let input = e.target;
-    if (e.keyCode === 8 && getInputNumbersValue(input).length == 0) {
-      input.value = "";
-    }
-  };
+  //   if (["7", "8", "9"].includes(inputNumbersValue[0])) {
+  //     if (inputNumbersValue[0] == "9")
+  //       inputNumbersValue = "7" + inputNumbersValue;
+  //     let firstSymbols = inputNumbersValue[0] == "8" ? "8" : "+7";
+  //     formattedInputValue = firstSymbols + " ";
+  //     if (inputNumbersValue.length > 1) {
+  //       formattedInputValue += "(" + inputNumbersValue.substring(1, 4);
+  //     }
+  //     if (inputNumbersValue.length >= 5) {
+  //       formattedInputValue += ") " + inputNumbersValue.substring(4, 7);
+  //     }
+  //     if (inputNumbersValue.length >= 8) {
+  //       formattedInputValue += "-" + inputNumbersValue.substring(7, 9);
+  //     }
+  //     if (inputNumbersValue.length >= 10) {
+  //       formattedInputValue += "-" + inputNumbersValue.substring(9, 11);
+  //     }
+  //   } else {
+  //     formattedInputValue = "+" + inputNumbersValue;
+  //   }
+
+  //   input.value = formattedInputValue;
+  // };
+
+  // const onPhoneKeyDown = (e) => {
+  //   let input = e.target;
+  //   if (e.keyCode === 8 && getInputNumbersValue(input).length == 0) {
+  //     input.value = "";
+  //   }
+  // };
 
   const onPhonePaste = (e) => {
     let input = e.target;
@@ -270,7 +243,7 @@ const Modal = ({ isOpen, onClose }) => {
               placeholder="Телефон"
               maxLength="18"
               onInput={onPhoneInput}
-              onKeyDown={onPhoneKeyDown}
+              // onKeyDown={onPhoneKeyDown}
               onPaste={onPhonePaste}
               value={phone}
               onBlur={blurHandler}
@@ -309,15 +282,6 @@ const Modal = ({ isOpen, onClose }) => {
               value={message}
               onChange={messageHandler}
             ></textarea>
-            {/* <span
-              className={`modal__error ${
-                (phoneDirty || emailDirty) && messageError
-                  ? "modal__error_visible"
-                  : ""
-              }`}
-            >
-              {messageError}
-            </span> */}
             <button
               type="submit"
               className={`modal__button ${

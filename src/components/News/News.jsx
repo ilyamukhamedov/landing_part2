@@ -1,5 +1,7 @@
 import React from "react";
 import "./News.css";
+import news1 from "../../images/news_1.webp";
+import news2 from "../../images/news_2.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -15,25 +17,33 @@ const News = () => {
           modules={[Navigation, Pagination]}
           loop={true}
           grabCursor={true}
-          spaceBetween={120}
+          spaceBetween={115}
           pagination={{
             clickable: true,
           }}
           breakpoints={{
             768: {
-              slidesPerView: 1,
-            },
-            1125: {
               slidesPerView: 2,
             },
+            // 1125: {
+            //   slidesPerView: 2,
+            // },
           }}
           navigation={true}
         >
-          <SwiperSlide className="news__swiper">
-            <div className="news__block"></div>
+          <SwiperSlide>
+            <img
+              className="news__image"
+              src={news1}
+              alt="information about the events"
+            />
           </SwiperSlide>
-          <SwiperSlide className="news__swiper">
-            <div className="news__block"></div>
+          <SwiperSlide>
+            <img
+              className="news__image"
+              src={news2}
+              alt="information about the events"
+            />
           </SwiperSlide>
         </Swiper>
       </div>

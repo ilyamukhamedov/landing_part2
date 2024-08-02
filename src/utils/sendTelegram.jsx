@@ -12,7 +12,7 @@ export default async function sendTelegram(e) {
   );
   formSendResultTitle.textContent = "";
   formSendResultDescription.textContent = "";
-  formSendResultTitle.style.color = "#000";
+  formSendResultTitle.style.color = "#222";
 
   const { name, phone, email, message } = Object.fromEntries(
     new FormData(form).entries()

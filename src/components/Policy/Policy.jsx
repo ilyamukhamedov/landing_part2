@@ -20,20 +20,11 @@ const Policy = ({ isOpen }) => {
           партнерам <br />
           по адресу:
           <br />
-          <a className="policy__link" href="https://grifbook.ru/contacts">
-            grifbook.ru
-          </a>
-          <br /> АРХ ЛАВКА Москва, ул. Рождественка, д. 11
+          ПОЯВЯТСЯ ПОЗЖЕ!
         </p>
+        <img className="policy__image" src={book} alt="image of the book" />
         <img
-          loading="lazy"
-          className="policy__image"
-          src={book}
-          alt="image of the book"
-        />
-        <img
-          loading="lazy"
-          className="policy__image1"
+          className="policy__image policy__image-left"
           src={book}
           alt="image of the book"
         />

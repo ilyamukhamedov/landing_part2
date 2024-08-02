@@ -47,13 +47,13 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 100px;
+  gap: 70px;
   color: #f0f1e9;
   width: 100%;
 }
 
 .slider__controller-mobile {
-  gap: 190px;
+  gap: 120px;
 }
 
 .swiper-pagination-bullet {
