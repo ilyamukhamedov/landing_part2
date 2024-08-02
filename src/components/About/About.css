@@ -41,7 +41,7 @@
   margin: 0;
 }
 
-.about__box {
+.about__link {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -54,18 +54,20 @@
   border-radius: 20px;
   background-color: rgba(216, 216, 216, 0.25);
   transition: 0.2s ease;
+  text-decoration: none;
 }
 
-.about__link {
+.about__paragraph {
   font-family: "Involve", sans-serif;
   font-weight: normal;
   font-size: 20px;
   line-height: 25px;
   color: #f0f1e9;
-  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
-.about__box:hover {
+.about__link:hover {
   opacity: 0.7;
 }
 

@@ -8,16 +8,20 @@ const About = () => {
   return (
     <div className="about" id="about">
       <div className="about__container">
-        <div className="about__box">
-          <a
-            className="about__link"
-            target="_blank"
-            href="https://www.nbgarden.ru/book_1/"
+        <a
+          className="about__link"
+          target="_blank"
+          href="https://www.nbgarden.ru/book_1/"
+        >
+          <p
+            className="about__paragraph"
+            // target="_blank"
+            // href="https://www.nbgarden.ru/book_1/"
           >
             Узнать что было в 1 части
-          </a>
+          </p>
           <img className="about__image-link" src={link} alt="image of link" />
-        </div>
+        </a>
         <h1 className="about__title">О Книге</h1>
         <div className="about__wrapper">
           <div className="about__block">
