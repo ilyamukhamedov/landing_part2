@@ -1,5 +1,7 @@
 import mobile1 from "../images/1.webp";
 import mobile2 from "../images/2.webp";
+import mobile10 from "../images/10.webp";
+import mobile11 from "../images/11.webp";
 import mobile88 from "../images/88.webp";
 import mobile89 from "../images/89.webp";
 import mobile256 from "../images/256.webp";
@@ -7,6 +9,7 @@ import mobile257 from "../images/257.webp";
 import page1 from "../images/page_1.webp";
 import page2 from "../images/page_2.webp";
 import page3 from "../images/page_3.webp";
+import page4 from "../images/page_4.webp";
 
 export const fragmentMobile = [
   {
@@ -19,23 +22,34 @@ export const fragmentMobile = [
     image: mobile2,
     alt: "fragment of book",
   },
+
   {
     id: 3,
-    image: mobile88,
+    image: mobile10,
     alt: "fragment of book",
   },
   {
     id: 4,
-    image: mobile89,
+    image: mobile11,
     alt: "fragment of book",
   },
   {
     id: 5,
-    image: mobile256,
+    image: mobile88,
     alt: "fragment of book",
   },
   {
     id: 6,
+    image: mobile89,
+    alt: "fragment of book",
+  },
+  {
+    id: 7,
+    image: mobile256,
+    alt: "fragment of book",
+  },
+  {
+    id: 8,
     image: mobile257,
     alt: "fragment of book",
   },
@@ -55,6 +69,11 @@ export const fragmentDesktop = [
   {
     id: 3,
     image: page3,
+    alt: "fragment of book",
+  },
+  {
+    id: 4,
+    image: page4,
     alt: "fragment of book",
   },
 ];

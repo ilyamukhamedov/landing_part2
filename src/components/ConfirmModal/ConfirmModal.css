@@ -39,7 +39,7 @@
 }
 
 .confirm__title {
-  font-family: "Helvetica";
+  font-family: "Involve", sans-serif;
   font-size: 40px;
   margin: 0;
   padding-bottom: 40px;
@@ -47,9 +47,19 @@
 }
 
 .confirm__description {
-  font-family: "Helvetica";
+  font-family: "Involve", sans-serif;
   font-weight: lighter;
   font-size: 20px;
   margin: 0;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .confirm__title {
+    font-size: 25px;
+  }
+
+  .confirm__description {
+    font-size: 15px;
+  }
 }

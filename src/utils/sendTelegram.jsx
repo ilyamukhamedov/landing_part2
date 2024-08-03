@@ -41,7 +41,7 @@ export default async function sendTelegram(e) {
   } catch (error) {
     console.error(error);
     formSendResultTitle.textContent = "Что-то пошло не так!";
-    formSendResultTitle.style.color = "red";
+    formSendResultTitle.style.color = "#ff3700";
     formSendResultDescription.textContent =
       "Попробуйте повторить попытку немного позднее";
   } finally {

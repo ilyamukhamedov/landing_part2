@@ -18,22 +18,22 @@ const Modal = ({ isOpen, onClose }) => {
   const [emailError, setEmailError] = useState(
     "Пожалуйста введите телефон или Email"
   );
-
-  // const [messageError, setMessageError] = useState(
-  //   "Пожалуйста введите телефон или Email"
-  // );
-
-  // const [messageDirty, setMessageDirty] = useState(false);
   const [formValid, setFormValid] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
 
+  console.log("");
+  console.log("form", formValid);
+  console.log("name", Boolean(nameError));
+  console.log("tel", Boolean(phoneError));
+  console.log("email", Boolean(emailError));
+
   useEffect(() => {
-    if (nameError || phoneError || emailError) {
+    if (nameError || emailError || phoneError) {
       setFormValid(false);
     } else {
       setFormValid(true);
     }
-  }, [nameError, phoneError, emailError]);
+  }, [nameError, emailError, phoneError]);
 
   const blurHandler = (e) => {
     switch (e.target.name) {
@@ -51,21 +51,20 @@ const Modal = ({ isOpen, onClose }) => {
 
   const emailHandler = (e) => {
     const value = e.target.value;
-
     setEmail(value);
 
     const re =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
     if (!re.test(String(value).toLowerCase())) {
-      setEmailError("Некорректный email");
+      !value
+        ? !phoneError && phone
+          ? setEmailError("")
+          : setEmailError("Пожалуйста введите телефон или Email")
+        : setEmailError("Некорректный email");
     } else {
       setEmailError("");
-      setPhoneError("");
-    }
-
-    if (!value) {
-      setEmailError("Пожалуйста введите телефон или Email");
+      phoneError != "Неверный номер телефона" && setPhoneError("");
     }
   };
 
@@ -73,15 +72,15 @@ const Modal = ({ isOpen, onClose }) => {
     const value = e.target.value;
     setPhone(value);
 
-    if (value.length < 17) {
-      setPhoneError("Неверный номер телефона");
+    if (value.length < 18) {
+      !value
+        ? !emailError && email
+          ? setPhoneError("")
+          : setPhoneError("Пожалуйста введите телефон или Email")
+        : setPhoneError("Неверный номер телефона");
     } else {
       setPhoneError("");
-      setEmailError("");
-    }
-
-    if (!value) {
-      setPhoneError("Пожалуйста введите телефон или Email");
+      emailError != "Некорректный email" && setEmailError("");
     }
   };
 
@@ -89,7 +88,7 @@ const Modal = ({ isOpen, onClose }) => {
     const inputValue = e.target.value;
     const filteredValue = inputValue.replace(/[^a-zA-Zа-яА-Я\s]/g, "");
     setName(filteredValue);
-    if (!e.target.value) {
+    if (!filteredValue) {
       setNameError("Имя не может быть пустым");
     } else {
       setNameError("");
@@ -163,37 +162,6 @@ const Modal = ({ isOpen, onClose }) => {
     input.value = formattedInputValue;
   };
 
-  //   if (["7", "8", "9"].includes(inputNumbersValue[0])) {
-  //     if (inputNumbersValue[0] == "9")
-  //       inputNumbersValue = "7" + inputNumbersValue;
-  //     let firstSymbols = inputNumbersValue[0] == "8" ? "8" : "+7";
-  //     formattedInputValue = firstSymbols + " ";
-  //     if (inputNumbersValue.length > 1) {
-  //       formattedInputValue += "(" + inputNumbersValue.substring(1, 4);
-  //     }
-  //     if (inputNumbersValue.length >= 5) {
-  //       formattedInputValue += ") " + inputNumbersValue.substring(4, 7);
-  //     }
-  //     if (inputNumbersValue.length >= 8) {
-  //       formattedInputValue += "-" + inputNumbersValue.substring(7, 9);
-  //     }
-  //     if (inputNumbersValue.length >= 10) {
-  //       formattedInputValue += "-" + inputNumbersValue.substring(9, 11);
-  //     }
-  //   } else {
-  //     formattedInputValue = "+" + inputNumbersValue;
-  //   }
-
-  //   input.value = formattedInputValue;
-  // };
-
-  // const onPhoneKeyDown = (e) => {
-  //   let input = e.target;
-  //   if (e.keyCode === 8 && getInputNumbersValue(input).length == 0) {
-  //     input.value = "";
-  //   }
-  // };
-
   const onPhonePaste = (e) => {
     let input = e.target;
     let pasted = e.clipboardData;
@@ -211,9 +179,13 @@ const Modal = ({ isOpen, onClose }) => {
     <>
       <div
         className={`modal ${isOpen ? "modal__opened" : ""}`}
-        onClick={onClose}
+        onMouseDown={(e) => {
+          if (e.target === e.currentTarget) {
+            onClose();
+          }
+        }}
       >
-        <div className="modal__container" onClick={(e) => e.stopPropagation()}>
+        <div className="modal__container">
           <div className="modal__header">
             <h2 className="modal__title">Оставить заявку</h2>
             <button
@@ -234,7 +206,8 @@ const Modal = ({ isOpen, onClose }) => {
               value={name}
               onChange={nameHandler}
               required
-              onBlur={blurHandler}
+              // onBlur={blurHandler}
+              onFocus={blurHandler}
             />
             <span
               className={`modal__error ${
@@ -250,10 +223,10 @@ const Modal = ({ isOpen, onClose }) => {
               placeholder="Телефон"
               maxLength="18"
               onInput={onPhoneInput}
-              // onKeyDown={onPhoneKeyDown}
               onPaste={onPhonePaste}
               value={phone}
-              onBlur={blurHandler}
+              // onBlur={blurHandler}
+              onFocus={blurHandler}
               onChange={phoneHandler}
             />
             <span
@@ -271,7 +244,8 @@ const Modal = ({ isOpen, onClose }) => {
               maxLength="40"
               value={email}
               onChange={emailHandler}
-              onBlur={blurHandler}
+              // onBlur={blurHandler}
+              onFocus={blurHandler}
             />
             <span
               className={`modal__error ${
