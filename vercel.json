@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/book_2/:path*",
+      "destination": "/:path*"
+    }
+  ]
+}
