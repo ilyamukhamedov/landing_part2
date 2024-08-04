@@ -9,8 +9,10 @@ Used telegram API for application processing
 ## Getting Started:
 
 1. Clone the repository: git clone [(https://github.com/ilyamukhamedov/landing_part2]
-2. Install dependencies: npm install or yarn install
-3. Start the development server: npm run dev or yarn dev
+2. Install dependencies: `npm install` or `yarn install`
+3. Start the development server: `npm run dev` or `yarn dev`
 4. Open the application in your web browser: http://localhost:5173/book_2
 
 ### Deploy:
+
+https://landing-part2.vercel.app/
