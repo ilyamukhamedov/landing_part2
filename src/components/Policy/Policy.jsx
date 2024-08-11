@@ -24,7 +24,7 @@ const Policy = ({ isOpen }) => {
             href="https://zstrela-books.ru/books/tproduct/451363602-641744385392-nbsad-lesnie-uchastki"
             target="_blank"
           >
-            Зеленая стрела
+            Зеленая стрела г. Санкт-Петербург
           </a>
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
