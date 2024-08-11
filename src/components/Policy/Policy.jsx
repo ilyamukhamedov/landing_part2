@@ -17,10 +17,15 @@ const Policy = ({ isOpen }) => {
         </button>
         <p className="policy__text">
           Если вас интересует розничная покупка, вы можете обратиться к нашим
-          партнерам <br />
-          по адресу:
+          партнерам:
           <br />
-          Информация обновляется
+          <a
+            className="policy__link"
+            href="https://zstrela-books.ru/books/tproduct/451363602-641744385392-nbsad-lesnie-uchastki"
+            target="_blank"
+          >
+            Зеленая стрела
+          </a>
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
         <img
