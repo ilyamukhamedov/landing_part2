@@ -26,6 +26,14 @@ const Policy = ({ isOpen }) => {
           >
             Зеленая стрела г. Санкт-Петербург
           </a>
+          <br />
+          <a
+            className="policy__link"
+            href="https://arh-lavka.ru/"
+            target="_blank"
+          >
+            Арх Лавка г. Москва
+          </a>
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
         <img

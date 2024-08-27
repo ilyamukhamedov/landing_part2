@@ -98,11 +98,12 @@
 .footer__copyright {
   font-family: "Involve", sans-serif;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
   color: #f0f1e9;
   margin: 0;
   padding-top: 40px;
   text-align: right;
+  padding-bottom: 10px;
 }
 .footer__link {
   color: #f0f1e9;
