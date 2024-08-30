@@ -32,7 +32,7 @@ const Policy = ({ isOpen }) => {
             href="https://arh-lavka.ru/"
             target="_blank"
           >
-            Арх Лавка г. Москва
+            Арх Лавка г. Москва, ул. Рождественка д.11 (около МАРХИ)
           </a>
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
