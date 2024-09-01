@@ -78,7 +78,7 @@ const Footer = () => {
         Copyright © 2024 by{" "}
         <a
           className="footer__link"
-          href="https://ilya-portfolio.vercel.app/"
+          href="https://www.ilyam.tech/"
           target="_blank"
         >
           Ilya
