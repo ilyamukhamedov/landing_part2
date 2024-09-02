@@ -10,6 +10,7 @@ import Policy from "../Policy/Policy";
 import ModalPreview from "../ModalPreview/ModalPreview";
 import Modal from "../Modal/Modal";
 import News from "../News/News";
+import Map from "../Map/Map";
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -55,6 +56,7 @@ const App = () => {
       <Fragment handleOpen={handleOpenPreview} />
       <Reviews />
       <Policy isOpen={handleOpen} />
+      <Map />
       <News />
       <Footer />
       <Modal isOpen={open} onClose={handleClose} />
