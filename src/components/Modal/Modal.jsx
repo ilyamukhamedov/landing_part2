@@ -21,12 +21,6 @@ const Modal = ({ isOpen, onClose }) => {
   const [formValid, setFormValid] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
 
-  console.log("");
-  console.log("form", formValid);
-  console.log("name", Boolean(nameError));
-  console.log("tel", Boolean(phoneError));
-  console.log("email", Boolean(emailError));
-
   useEffect(() => {
     if (nameError || emailError || phoneError) {
       setFormValid(false);
