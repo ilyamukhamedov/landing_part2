@@ -11,15 +11,15 @@ Used telegram API for application processing
 1. Clone the repository: git clone [(https://github.com/ilyamukhamedov/landing_part2]
 2. Install dependencies: `npm install` or `yarn install`
 3. Start the development server: `npm run dev` or `yarn dev`
-4. Open the application in your web browser: http://localhost:5173/book_2
+4. Open the application in your web browser: [http://localhost:5173]
 
 ### 1 Part of the Book :
 
-https://github.com/ilyamukhamedov/landing_part1
+[https://github.com/ilyamukhamedov/landing_part1]
 
 ### Deploy:
 
-https://landing-part2.vercel.app/
+[https://landing-part2.vercel.app/]
 
 ### Screenshots
 
