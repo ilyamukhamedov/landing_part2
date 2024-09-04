@@ -19,7 +19,7 @@ const Map = () => {
 
   return (
     <div className="map">
-      <h1 className="map__title">Нашу книгу уже читают по всей России</h1>
+      <h1 className="map__title">Нашу книгу уже читают...</h1>
       <div className="map__container">
         <img src={RussianMap} alt="Карта России" className="svg-map" />
 
