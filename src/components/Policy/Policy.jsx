@@ -34,6 +34,10 @@ const Policy = ({ isOpen }) => {
           >
             Арх Лавка г. Москва, ул. Рождественка д.11 (около МАРХИ)
           </a>
+          <br />
+          <a className="policy__link" href="https://sad-24.ru/" target="_blank">
+            СЦ Садовник г. Екатеринбург, г.В. Пышма, г. Арамиль
+          </a>
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
         <img
