@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import whatsapp from "../../images/whatsappcolor.svg";
+import vk from "../../images/vk.svg";
 import mail from "../../images/mail.svg";
 import nb from "../../images/Nb.svg";
 
@@ -70,6 +71,21 @@ const Footer = () => {
                   nb-garden.ru
                 </a>
               </div>
+            </div>
+            <div className="footer__block">
+              <img
+                loading="lazy"
+                className="footer__img"
+                src={vk}
+                alt="vk icon"
+              />
+              <a
+                className="footer__info"
+                href="https://vk.com/nbgarden"
+                target="_blank"
+              >
+                Вконтакте
+              </a>
             </div>
           </div>
         </div>
