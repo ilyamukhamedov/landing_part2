@@ -31,32 +31,35 @@ const Reviews = () => {
           navigation={true}
           className=" swiper-wrapper"
         >
-          {reviewsData.map((review) => (
-            <SwiperSlide
-              className="swiper-slide "
-              style={{
-                display: "grid",
-                height: "auto",
-              }}
-              key={review.id}
-            >
-              {review.photo ? (
-                <div className="card__block">
-                  <img
-                    className="card__image"
-                    src={review.photo}
-                    alt={review.name}
-                  />
-                </div>
-              ) : (
-                <div className="card__data">
-                  <h2 className="card__name">{review.name}</h2>
-                  <span className="card__position">{review.position}</span>
-                  <p className="card__description">{review.description}</p>
-                </div>
-              )}
-            </SwiperSlide>
-          ))}
+          {reviewsData
+            .slice(0)
+            .reverse()
+            .map((review) => (
+              <SwiperSlide
+                className="swiper-slide "
+                style={{
+                  display: "grid",
+                  height: "auto",
+                }}
+                key={review.id}
+              >
+                {review.photo ? (
+                  <div className="card__block">
+                    <img
+                      className="card__image"
+                      src={review.photo}
+                      alt={review.name}
+                    />
+                  </div>
+                ) : (
+                  <div className="card__data">
+                    <h2 className="card__name">{review.name}</h2>
+                    <span className="card__position">{review.position}</span>
+                    <p className="card__description">{review.description}</p>
+                  </div>
+                )}
+              </SwiperSlide>
+            ))}
         </Swiper>
       </section>
     </div>
