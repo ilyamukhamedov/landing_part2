@@ -38,6 +38,31 @@ const Policy = ({ isOpen }) => {
           <a className="policy__link" href="https://sad-24.ru/" target="_blank">
             СЦ Садовник г. Екатеринбург, г.В. Пышма, г. Арамиль
           </a>
+          <br />
+          <p className="policy__text">Дизайнер BOOKS:</p>
+          <a
+            className="policy__link"
+            href="https://www.designerbooks.ru/main.php?level=item&id=5072"
+            target="_blank"
+          >
+            www.designerbooks.ru
+          </a>
+          <br />
+          <a
+            className="policy__link"
+            href="https://www.ozon.ru/product/nb-sad-lesnye-uchastki-1878599558/"
+            target="_blank"
+          >
+            www.ozon.ru
+          </a>
+          <br />
+          <a
+            className="policy__link"
+            href="https://www.avito.ru/moskva/knigi_i_zhurnaly/nb.sad_lesnye_uchastki_4805834015"
+            target="_blank"
+          >
+            www.avito.ru
+          </a>
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
         <img
