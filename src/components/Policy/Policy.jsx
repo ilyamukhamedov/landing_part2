@@ -63,6 +63,14 @@ const Policy = ({ isOpen }) => {
           >
             www.avito.ru
           </a>
+          <br />
+          <a
+            className="policy__link"
+            href="https://market.yandex.ru/product--nb-sad-lesnye-uchastki/1017537743?sku=103780793649&uniqueId=738602&do-waremd5=RXU7AnW3Bee5ibowULfKLQ&clid=703"
+            target="_blank"
+          >
+            www.market.yandex.ru
+          </a>
         </p>
         <img className="policy__image" src={book} alt="image of the book" />
         <img

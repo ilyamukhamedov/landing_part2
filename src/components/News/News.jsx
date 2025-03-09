@@ -3,6 +3,7 @@ import "./News.css";
 import sep12 from "../../images/sep12.webp";
 import news1 from "../../images/news_1.webp";
 import news2 from "../../images/news_2.webp";
+import newstop from "../../images/news_top.webp";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -44,6 +45,13 @@ const News = () => {
           }}
           className="fragment__swiper"
         >
+          <SwiperSlide>
+            <img
+              className="news__image"
+              src={newstop}
+              alt="information about the events"
+            />
+          </SwiperSlide>
           <SwiperSlide>
             <a
               className="news__link"
